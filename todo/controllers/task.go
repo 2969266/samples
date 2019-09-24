@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/astaxie/beego"
-	"github.com/beego/samples/todo/models"
+	"github.com/2969266/samples/todo/models"
 )
 
 type TaskController struct {
@@ -46,6 +46,11 @@ func (this *TaskController) NewTask() {
 		return
 	}
 	models.DefaultTaskList.Save(t)
+}
+
+func (this *TaskController) TestDca() {
+	this.TplName = "detection-test-object.html"
+	this.Render()
 }
 
 // Examples:
